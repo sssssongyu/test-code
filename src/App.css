@@ -1,0 +1,46 @@
+#root {
+  display: flex;
+  flex-direction: row;
+}
+
+#instructions,
+#board-container {
+  flex: 1 1 0%;
+}
+
+/* At leass than 800 pixels, stack in columns */
+@media screen and (max-width: 800px) {
+  #root {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #instructions {
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid grey;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #instructions {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid grey;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #chess-board {
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #chess-board {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
